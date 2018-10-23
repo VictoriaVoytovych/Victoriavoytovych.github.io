@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Basic Scene with Environment - A-Frame</title>
+    <meta name="description" content="Basic Scene with Environment - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/fdist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene environment="preset: forest">
+      <a-assets>
+        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+         <a-asset-item id="minion-obj" src="minion.obj"></a-asset-item>
+       <a-asset-item id="minion-mtl" src="minion.mtl"></a-asset-item>
+      </a-assets>
+      
+      <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+          to="0 2.2 -5"></a-animation>
+        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+      </a-box>
+      <a-entity obj-model="obj: #minion-obj; mtl: #minion-mtl"></a-entity>
+
+
+
+      <a-text value="Hello Children!" color="#FF9DE9" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+      
+      <a-sky id="sky" src="http://camerainformation.com/wp-content/uploads/2018/06/1strandykosekseattlewaterfrontatdusk.jpg"></a-sky>
+
+      <a-plane color="green" height="100" width="100" rotation="-90 0 0"></a-plane>
+        </a-scene>
+
+      <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body> 
+</html>
