@@ -8,27 +8,17 @@
   <body>
     <a-scene environment="preset: forest">
       <a-assets>
-        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-         <a-asset-item id="minion-obj" src="minion.obj"></a-asset-item>
-       <a-asset-item id="minion-mtl" src="minion.mtl"></a-asset-item>
+
+      <a-assets>
+     <a-asset-item id="plantcell-obj" src="plantcell.obj"></a-asset-item>
+     <a-asset-item id="obj-mtl" src="obj.mtl"></a-asset-item>
       </a-assets>
+
+      <a-text value="Plant Cell!" color="green" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
       
-      <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
-        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
-        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      </a-box>
-      <a-entity obj-model="obj: #minion-obj; mtl: #minion-mtl" rotation="-90 0 0" position= "0 5 -5"></a-entity>
+      <a-sky id="sky" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-2DQ8hOi3erc8uPjF9A6ZtVYuzlssrS-6-5YlcppdDplMcOgU:https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/YWAdzU2/360-vr-space-3002-virtual-reality-video-of-flying-through-star-fields-in-space-loop-designed-to-be-used-in-oculus-rift-samsung-gear-vr-and-other-virtual-reality-displays_Hs5sM0zM_thumbnail-full07.png"></a-sky>
 
-
-
-      <a-text value="Hello Children!" color="#FF9DE9" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
-      
-      <a-sky id="sky" src="http://camerainformation.com/wp-content/uploads/2018/06/1strandykosekseattlewaterfrontatdusk.jpg"></a-sky>
-
-      <a-plane color="green" height="100" width="100" rotation="-90 0 0"></a-plane>
+      <a-plane color="gray" height="100" width="100" rotation="-90 0 0"></a-plane>
         </a-scene>
 
       <a-camera>
