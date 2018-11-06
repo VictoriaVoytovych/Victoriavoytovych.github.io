@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Basic Scene with Environment - A-Frame</title>
+    <meta name="description" content="Basic Scene with Environment - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+         <a-asset-item id="cell-obj" src="plantcell.obj"></a-asset-item>
+          <a-asset-item id="cell-mtl" src="cell.mtl"></a-asset-item>
+      </a-assets>
+2
+      <a-entity obj-model="obj: #cell-obj; mtl: #cell-mtl" rotation="-90 160.0 0" position= " 0 1.511 -16.5" scale="0.1 0.1 0.1"> </a-entity>
+
+      <a-plane color="green" height="100" width="100" rotation="-90 0 0"></a-plane>
+      <a-text value="Hello, I'm a Plant Cell!"</a-text>
+
+
+     
+    </a-scene>
+  </body> 
+</html>
