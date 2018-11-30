@@ -8,6 +8,19 @@
 
     <a-scene>
 
+      <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+<a-text id="welcome" visible = "false" value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
+
+<a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336"
+event-set__enter="_event: mouseenter; _target: #welcome; visible: true"
+event-set__leave="_event: mouseleave; _target: #welcome; visible: false">
+</a-box>
+
+<a-camera>
+<a-cursor></a-cursor>
+</a-camera>
+
       <a-assets>
          <a-asset-item id="cell-obj" src="plantcell.obj"></a-asset-item>
           <a-asset-item id="cell-mtl" src="cell.mtl"></a-asset-item>
